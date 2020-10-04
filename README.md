@@ -1,19 +1,24 @@
 
-#Desafio-LaunchBase-04-5
+#Desafio-LaunchBase-04-6
 
 
 
 
 ## :rocket: Sobre o desafio
 
-Nessa etapa você irá implementar duas rotas: PUT e DELETE para a atualização e remoção, respectivamente, dos dados cadastrados de um professor.
-### PUT:
+Nessa etapa você deve listar todos os professores salvos no arquivo json e apresentá-los em formato de tabela.
+### Listagem:
 
-Crie uma rota para receber os dados do formulário de edição e propagar no arquivo json. Lembre de sobrescrever o método POST do form para PUT (utilize a lib method-override). Dentro do arquivo teachers.js, crie um método update para buscar e retornar o professor a partir do id fornecido na rota. Faça a busca pelo professor a partir do id e atualize no arquivo json os dados que foram alterados (utilize o constructor Number para formatar o id como número). Por fim, redirecione para a página de apresentação dos dados de um professor (show)..
+Crie uma rota para repassar para o arquivo de listagem os dados dos professores salvos no arquivo json.
 
-### DELETE:
+### Tabela:
 
-Crie um botão na página de apresentação dos dados do professor. Esse botão irá chamar uma rota para deletar o professor do arquivo json. Lembre de sobrescrever o método POST do form para DELETE (utilize a lib method-override). Dentro do arquivo teachers.js, crie um método delete e gere um array com todos os professores, exceto o que deve ser removido (filter). Por fim, redirecione para a página de listagem dos professores.
+Crie um arquivo que irá mostrar os dados dos professores em formato de tabela. Utilize Nome completo, Acompanhamento e Ação como cabeçalhos.
 
 ### Estilização
-Você tem liberdade para escolher a estilização que preferir para esse desafio.
+Você tem liberdade para escolher a estilização que preferir para esse desafio, mas alguns pontos são obrigatórios:
+
+A tabela deve ocupar todo o espaçamento do cartão;
+Os cabeçalhos e os valores devem estar centralizados;
+A imagem deve ser apresentada antes do nome. Deve ter formato circular e tamanho de 40px;
+O campo Acompanhamento deve apresentar as matérias lecionadas de forma separada (array, assim como na página de apresentação de dados de um professor).

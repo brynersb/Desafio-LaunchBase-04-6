@@ -1,14 +1,15 @@
 const express = require('express')
 const routes = express.Router()
 const teachers = require('./controllers/teachers')
+const data = require('./data.json')
 
 routes
     .get("/", function (req, res) {
-        return res.redirect("/teachers/2")
+        return res.redirect("/teachers/")
     })
 
     .get("/teachers/", function (req, res) {
-        return res.render("./teachers/index")
+        return res.render("./teachers/index", { teachers: data.teachers })
     })
 
     .get("/teachers/create", function (req, res) {
@@ -27,7 +28,7 @@ routes
 
     .get("/studants", function (req, res) {
 
-        return res.render("./studants/studants")
+        return res.render("./studants/index")
     })
 
 // routes.use(function (req, res) {

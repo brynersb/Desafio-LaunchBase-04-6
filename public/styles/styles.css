@@ -6,9 +6,6 @@
     --secundary-color: #e4fc0e;
     --color-green: #47f741;
     --color-green2: #47f74180;
-    
-
-    
 }
 
 * {
@@ -44,7 +41,10 @@ header nav a+a {
     margin-left: 30px;
 }
 
-
+header nav a.active {
+    color: var(--color-green);
+    font-size: 30px;
+}
 
 header nav a:hover{
     color: var(--color-green);
@@ -220,4 +220,109 @@ a.edit{
     text-align: center;
     border: 1px solid black;
     box-shadow: 1px 1px 3px black;
+}
+
+/* Tabela inicial */
+
+.table-container{
+    display: block;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.table-container table{
+    border-spacing: 0;
+    width: 100%;
+}
+
+.table-container thead tr th{
+    text-align: center;
+}
+
+td,th{
+    padding: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+td:nth-child(3){
+    width: 80px;
+}
+td:nth-child(2) span {
+    padding: 8px 16px;
+    background-color: var(--color-green2);
+    border-radius: 16px;
+    color: #777;
+    margin-right: 4px;
+    margin-top: 8px;
+   
+}
+
+th{
+    text-transform: uppercase;
+    color: #777;
+    font-size:14px;
+}
+
+tbody tr:last-child td{
+    border-bottom: none;
+}
+
+tbody tr td:first-child{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span{
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+    border: 2px solid white
+}
+
+tbody tr td:last-child a{
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.table-container a:first-child{
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-left: 14px;
+    display: inline-block;
+
+
+} 
+
+.table-container thead tr th:last-child,
+td:last-child {
+    text-align: center;
+}
+
+.areas,
+.details .item div:nth-child(2) span {
+    background-color: var(--colort);
+    border-radius: 16px;
+    padding: 8px 16px;
+    display: inline-block;
+    margin-right: 4px;
+    margin-top: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #555;
 }

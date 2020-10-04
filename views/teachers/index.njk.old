@@ -3,17 +3,15 @@
 {% block content %}
 
     <div class="card table-container">
-        <a href="/teachers/create">CRIAR</a>
+        <a href="/teachers/create">Novo</a>
         <table>
             <thead>
                 <tr>
-                    <th>Professor</th>
-                    <th>Aulas</th>
-                    <th>Tipo de Aula</th>
+                    <th>teacher</th>
+                    <th>Atendimento</th>
                     <th>Ação</th>
                 </tr>
             </thead>
-
             <tbody>
                 {% for teacher in teachers %}
                     <tr>
@@ -21,23 +19,16 @@
                             <span style="background-image: url({{teacher.avatar_url}})"></span>
                             {{teacher.name}}
                         </td>
+                        <td>{{teacher.materias}}</td>
                         <td>
-                        {% for materias in teacher.materias.split(',') %}
-                            <span class="areas">{{materias}}</span>
-                        {% endfor %}
-                        </td>
-                        <td>
-                            {{"A distancia" if teacher.aula_type == "distancia" else "Presencial"}}
-                        </td>
-                        <td>
-                            <a href="/teachers/{{teacher.id}}">VER</a>
+                            <a href="/teachers/{{teacher.id}}">ver</a>
                         </td>
                     </tr>
+
                 {% endfor %}
+
             </tbody>
         </table>
-
-    </section>
-</div>
+    </div>
 
 {% endblock content %}
